@@ -1,6 +1,6 @@
 import "./Register.css"
 import twitterLogo from "../assets/twitter.png";
-import { Link, useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
@@ -37,13 +37,13 @@ function Register() {
             <img src={twitterLogo} alt="Twitter Clone Logo" className="register-logo" />
             <div className="register-card">
                 <div className="register-header">
-                    <h2>Twitter Clone</h2>
-                    <h2>Üye Ol</h2>
+                    <h1>Twitter Clone</h1>
+                    <h3>Üye Ol</h3>
                 </div>
-                <div>
-                    <form onSubmit={handleSubmit(onSubmit)}>
-
-                        <div className="register-form-group">
+                <div className="register-form-card">
+                    <form onSubmit={handleSubmit(onSubmit)} className="register-form-group">
+                        <div className="register-input-group">
+                            <label htmlFor="userName">Kullanıcı Adı</label>
                             <input
                                 id="userName"
                                 type="text"
@@ -59,7 +59,8 @@ function Register() {
                             {errors.userName && (<span>{errors.userName.message}</span>)}
                         </div>
 
-                        <div className="register-form-group">
+                        <div className="register-input-group">
+                            <label htmlFor="email">E-Posta</label>
                             <input
                                 id="email"
                                 type="email"
@@ -74,9 +75,8 @@ function Register() {
                             />
                             {errors.email && (<span>{errors.email.message}</span>)}
                         </div>
-
-                        <div className="register-form-group">
-                            <label htmlFor="password">Password</label>
+                        <div className="register-input-group">
+                            <label htmlFor="password">Şifre</label>
                             <input
                                 id="password"
                                 type="password"
@@ -91,14 +91,13 @@ function Register() {
                             />
                             {errors.password && (<span>{errors.password.message}</span>)}
                         </div>
-                        <button type="submit" disabled={!isValid}>
+                        <button id="register-button" type="submit" disabled={!isValid}>
                             Kayıt Ol
                         </button>
+
                     </form>
-                    <div>
-                        <span>Zaten üye misin? </span>
-                        <Link to="/login">Giriş yap</Link>
-                    </div>
+                    <p>Kayıt olarak Hizmet Şartları, Gizlilik Politikası ve Çerez Kullanımı koşullarımızı kabul etmiş olursunuz.</p>
+                    <button id="routing-button" onClick={() => { history.push("/login") }}>Mevcut Hesabım Var</button>
                 </div>
             </div>
         </div>
