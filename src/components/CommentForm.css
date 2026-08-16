@@ -1,0 +1,64 @@
+.comment-form-container {
+    width: 100%;
+    max-width: 600px;
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.comment-form {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.7rem;
+    padding: 0.7rem;
+    border: 1px solid #222;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.comment-form textarea {
+    flex: 1;
+    padding: 0.6rem 0.8rem;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 0.9rem;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+.comment-form textarea::placeholder {
+    color: #777;
+}
+
+.comment-form button {
+    padding: 0.5rem 0.8rem;
+    border: 1px solid #000;
+    border-radius: 20px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.comment-form button:hover:not(:disabled) {
+    background-color: #333;
+}
+
+.comment-form button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.comment-form-button {
+    padding-top: 0.3rem;
+}
+
+.comment-error {
+    font-size: 0.7rem;
+    color: red;
+    padding-left: 1rem;
+}

@@ -1,0 +1,79 @@
+.tweet-modal-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 10rem;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.tweet-modal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 650px;
+    width: 100%;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 12px;
+    gap: 1rem;
+}
+
+.tweet-modal-form-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 1rem;
+}
+
+.tweet-modal-form-header textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+    font-family: inherit;
+    background-color: transparent;
+}
+
+.tweet-modal-form-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    gap: 0.5rem;
+    padding-top: 0.3rem;
+}
+
+.tweet-modal-form button {
+    padding: 0.45rem 0.75rem;
+    border: 1px solid #000;
+    border-radius: 18px;
+    background-color: #000;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.tweet-modal-form button:hover:not(:disabled) {
+    background-color: #333;
+    color: white;
+}
+
+.tweet-modal-form button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.tweet-modal-form span {
+    font-size: 0.9rem;
+    color: red;
+}

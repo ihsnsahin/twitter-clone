@@ -1,0 +1,84 @@
+.tweet-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 12px;
+    background-color: #fff;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tweet-card:hover {
+    background-color: #f7f9fa;
+    cursor: pointer;
+}
+
+.tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.tweet-action {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.tweet-action-icon {
+    border-radius: 100%;
+    border: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+    padding: 0.3rem;
+}
+
+.tweet-action-icon:hover {
+    background-color: rgba(128, 128, 128, 0.1);
+    cursor: pointer
+}
+
+.tweet-action-icon:hover .fa-heart,
+.tweet-action-icon:hover .fa-reg-heart {
+    color: #e0245e;
+}
+
+.tweet-action-icon:hover .fa-retweet {
+    color: #17bf63;
+}
+
+.tweet-action-icon:hover .fa-reg-comment {
+    color: #1da1f2;
+}
+
+.fa-heart {
+    color: #e0245e;
+}
+
+.fa-retweeted {
+    color: #17bf63;
+}
+
+.tweet-action span {
+    font-size: 0.8rem;
+    color: #555;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.tweet-date {
+    font-size: 0.8rem;
+}
+
+.fa-heart {
+    color: red;
+}

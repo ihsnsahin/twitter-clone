@@ -15,7 +15,6 @@ function Login() {
     });
     const history = useHistory();
     const onSubmit = async (data) => {
-
         try {
             const response = await axios.post(
                 "http://localhost:3000/login",

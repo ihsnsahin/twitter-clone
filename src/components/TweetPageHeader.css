@@ -1,0 +1,47 @@
+.tweet-detail-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tweet-detail-back {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tweet-detail-back h1 {
+    font-size: 1.7rem;
+}
+
+.tweet-detail-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.5rem;
+}
+
+.tweet-detail-arrow-left,
+.tweet-detail-edit,
+.tweet-detail-delete {
+    padding: 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.tweet-detail-arrow-left {
+    font-size: 2.3rem;
+}
+
+.tweet-detail-edit,
+.tweet-detail-delete {
+    font-size: 2.3rem;
+}
+
+.tweet-detail-arrow-left:hover,
+.tweet-detail-edit:hover,
+.tweet-detail-delete:hover {
+    background-color: #f0f0f0;
+}
