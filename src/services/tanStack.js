@@ -1,7 +1,7 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import {
     createComment, createTweet, deleteComment,
-    deleteTweet, dislikeTweet, getTweetById,
+    deleteTweet, dislikeTweet, getRetweetsByUserId, getTweetById,
     getTweetByUserId,
     getTweets, getUser, getUserByUserId, likeTweet, removeRetweet,
     retweet, updataComment, updataTweet
@@ -50,7 +50,10 @@ export function useLikeTweet() {
             });
             queryClient.invalidateQueries({
                 queryKey: ["tweet-user"],
-            })
+            });
+            queryClient.invalidateQueries({
+                queryKey: ["retweet-user"],
+            });
         }
     })
 }
@@ -67,7 +70,10 @@ export function useDislikeTweet() {
             });
             queryClient.invalidateQueries({
                 queryKey: ["tweet-user"],
-            })
+            });
+            queryClient.invalidateQueries({
+                queryKey: ["retweet-user"],
+            });
         }
     })
 }
@@ -87,6 +93,9 @@ export function useRetweet() {
             await queryClient.invalidateQueries({
                 queryKey: ["tweet-user"],
             });
+            await queryClient.invalidateQueries({
+                queryKey: ["retweet-user"],
+            });
         },
     });
 }
@@ -105,6 +114,9 @@ export function useRemoveRetweet() {
             });
             await queryClient.invalidateQueries({
                 queryKey: ["tweet-user"],
+            });
+            await queryClient.invalidateQueries({
+                queryKey: ["retweet-user"],
             });
         }
     })
@@ -196,7 +208,7 @@ export function useGetTweetByUserId(userId) {
         queryKey: ["tweet-user", String(userId)],
         queryFn: () => getTweetByUserId(userId),
         enabled: !!userId && userId !== "undefined",
-    });     //Burada biz id'yi sayısal bir değer olarak kayıt ediyoruz.
+    });
 };
 
 
@@ -204,6 +216,13 @@ export function useGetUserByUserId(userId) {
     return useQuery({
         queryKey: ["user", String(userId)],
         queryFn: () => getUserByUserId(userId)
-    });     //Burada biz id'yi sayısal bir değer olarak kayıt ediyoruz.
+    });
 };
 
+export function useGetRetweetsByUserId(userId) {
+    return useQuery({
+        queryKey: ["retweet-user", String(userId)],
+        queryFn: () => getRetweetsByUserId(userId),
+        enabled: !!userId && userId !== "undefined",
+    });
+};

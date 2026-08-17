@@ -12,6 +12,7 @@
     gap: 0.5rem;
 }
 
+/* Profil sayfasının kullanıcı bilgilerini içeren kart */
 .profil-header {
     display: flex;
     flex-direction: column;
@@ -23,8 +24,6 @@
     border-radius: 12px;
     background-color: #f1f1f1;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-
-    margin-bottom: 2rem;
 }
 
 .user-info {
@@ -62,4 +61,34 @@
 .tweet span:last-child {
     font-size: 1rem;
     font-weight: 400;
+}
+
+/*Profil sayfası tabs*/
+.profil-tabs {
+    display: flex;
+    width: 100%;
+    background-color: #fff;
+}
+
+.profil-tab {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.profil-tab:hover {
+    background-color: #f7f9fa;
+    cursor: pointer;
+}
+
+.profil-tab span {
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+    color: #777;
+}
+
+.profil-tab .active {
+    color: black;
+    font-weight: 600;
+    border-bottom: 3px solid #1D9BF0;
 }

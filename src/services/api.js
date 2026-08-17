@@ -147,10 +147,20 @@ export const getTweetByUserId = async (userId) => {
     );
     return response.data;
 };
-
+//userId'ye göre kullanıcı bilgileri
 export const getUserByUserId = async (userId) => {
     const response = await axios.get(
         `http://localhost:3000/user/${userId}`,
+        {
+            withCredentials: true
+        }
+    );
+    return response.data;
+};
+//userId'ye göre tweet listesi getirme Api isteği
+export const getRetweetsByUserId = async (userId) => {
+    const response = await axios.get(
+        `http://localhost:3000/retweet/findByUserId/${userId}`,
         {
             withCredentials: true
         }
