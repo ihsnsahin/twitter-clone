@@ -32,16 +32,25 @@
 }
 
 .tweet-detail-arrow-left {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
 }
 
 .tweet-detail-edit,
 .tweet-detail-delete {
-    font-size: 2.3rem;
+    font-size: 2.2rem;
 }
 
 .tweet-detail-arrow-left:hover,
 .tweet-detail-edit:hover,
 .tweet-detail-delete:hover {
     background-color: #f0f0f0;
+}
+
+@media (max-width:532px) {
+
+    .tweet-detail-edit,
+    .tweet-detail-delete {
+        font-size: 2rem;
+    }
+
 }

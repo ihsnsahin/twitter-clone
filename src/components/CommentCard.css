@@ -67,3 +67,12 @@
     font-size: 0.7rem;
     color: #666;
 }
+
+@media (max-width:532px) {
+
+    .comment-detail-edit,
+    .comment-detail-delete {
+        font-size: 1.4rem;
+    }
+
+}

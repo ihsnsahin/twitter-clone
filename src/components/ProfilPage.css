@@ -92,3 +92,9 @@
     font-weight: 600;
     border-bottom: 3px solid #1D9BF0;
 }
+
+@media (max-width: 532px) {
+    .profil-container {
+        padding: 1rem;
+    }
+}

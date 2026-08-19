@@ -12,3 +12,10 @@
     gap: 0.5rem;
 
 }
+
+@media (max-width:532px) {
+    .tweet-detail-container {
+        padding: 1rem;
+    }
+
+}
