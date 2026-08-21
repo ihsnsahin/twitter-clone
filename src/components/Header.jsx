@@ -21,9 +21,6 @@ function Header() {
                     withCredentials: true
                 }
             );
-
-            console.log("Logout response:", response);
-
             history.push("/login");
             queryClient.clear();//cache'i log out olunca temizlemek için kullandım.
         } catch (error) {
