@@ -4,6 +4,7 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { API_BASE_URL } from '../services/api'
 function Register() {
     const { register, handleSubmit, reset, formState: { errors, isValid } } = useForm({
         mode: "onChange",
@@ -13,11 +14,12 @@ function Register() {
             password: ""
         }
     });
+
     const history = useHistory();
     const onSubmit = async (data) => {
         try {
             const response = await axios.post(
-                "http://localhost:3000/register",
+                `${API_BASE_URL}/register`,
                 data
             );
             reset();

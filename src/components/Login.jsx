@@ -4,6 +4,7 @@ import twitterLogo from "../assets/twitter.png";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { API_BASE_URL } from "../services/api";
 
 function Login() {
     const { register, handleSubmit, formState: { errors, isValid } } = useForm({
@@ -17,7 +18,7 @@ function Login() {
     const onSubmit = async (data) => {
         try {
             const response = await axios.post(
-                "http://localhost:3000/login",
+                `${API_BASE_URL}/login`,
                 data,
                 {
                     withCredentials: true //bu istekte browser'ın cookileri kullanmasına izin verir.
