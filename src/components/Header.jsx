@@ -5,6 +5,7 @@ import axios from "axios";
 import { useQueryClient } from "@tanstack/react-query";
 import { useCurrentUser } from "../services/tanStack";
 import { FaHome, FaSignOutAlt, FaUser } from "react-icons/fa";
+import { API_BASE_URL } from "../services/api";
 
 
 function Header() {
@@ -14,7 +15,7 @@ function Header() {
     const handleLogout = async () => {
         try {
             const response = await axios.post(
-                "http://localhost:3000/logout",
+                `${API_BASE_URL}/logout`,
                 {},
                 {
                     withCredentials: true
